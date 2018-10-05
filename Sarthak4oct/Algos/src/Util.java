@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Scanner;
 
 public class Util {
 	public static boolean anagram(String s1, String s2) {
@@ -23,7 +24,6 @@ public class Util {
 		}
 		return b;
 	}
-
 	public static ArrayList<Integer> primeNumber() {
 		// int count = 0;
 
@@ -47,7 +47,6 @@ public class Util {
 		// System.out.println(count);
 		return a;
 	}
-
 	public static boolean palindromeInteger(int a) {
 		ArrayList<Integer> az = new ArrayList<Integer>();
 		int z;	
@@ -65,7 +64,24 @@ public class Util {
 		}
 		return true;
 	}
+	public static void tempConver() {
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter your conversion type 1 for Celsius and 2 for fahrenheit");
+		int i = s.nextInt();
 
+		if(i==1) {
+			System.out.println("Enter temperature in fahrenheit");
+			double temp = s.nextInt();
+			double celsius = (temp - 32) * 5/9; 
+			System.out.println(celsius+ " celsius");
+		}
+		if(i==2) {
+			System.out.println("Enter temperature in celsius");
+			double temp = s.nextInt();
+			double farhn =  (temp * 9/5) + 32; 
+			System.out.println(farhn+ " fahrenheit");
+		}
+	}
 	public static void anagramInteger(ArrayList<Integer> a) {
 		ArrayList<Integer> a1 = new ArrayList<Integer>();
 		ArrayList<Integer> a2 = new ArrayList<Integer>();
@@ -96,5 +112,23 @@ public class Util {
 			}
 			a1.removeAll(a1);
 		}
+	}
+	public static void monthlyPayment() {
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter Principal loan");
+		double P = s.nextDouble();
+		System.out.println("Enter percent interest");
+		double R = s.nextDouble();
+		System.out.println("Enter year to pay off");
+		double Y = s.nextDouble();
+		
+		double r = R/(12*100);
+		double n = 12*Y;
+		double deno = 1-(Math.pow((1+r),(-n)));
+		double payment = (P*r)/deno;
+		System.out.println(payment);
+	}
+	public static void main(String[] args) {
+		monthlyPayment();
 	}
 }

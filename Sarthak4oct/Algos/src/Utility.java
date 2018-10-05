@@ -71,7 +71,7 @@ public class Utility {
 	}
 	public static void bubbleSort() {
 
-		int[] ar = {5,6,7,2,1,3,8,9,4};
+		int[] ar = {8,4,5,6,2,1,3};
 		for(int k = 1;k<ar.length;k++) {
 			for(int i=0;i<ar.length-1;i++) {
 				//int j = ;
