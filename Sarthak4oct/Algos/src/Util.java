@@ -121,14 +121,34 @@ public class Util {
 		double R = s.nextDouble();
 		System.out.println("Enter year to pay off");
 		double Y = s.nextDouble();
-		
+
 		double r = R/(12*100);
 		double n = 12*Y;
 		double deno = 1-(Math.pow((1+r),(-n)));
 		double payment = (P*r)/deno;
 		System.out.println(payment);
 	}
+	
+	public static void dayOfWeek() {
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter Day");
+		int day = s.nextInt();
+
+		System.out.println("Enter Month");
+		int month = s.nextInt();
+
+		System.out.println("Enter year");
+		int year = s.nextInt();
+
+		int y = year - (14 - month) / 12;		
+		int		x = y + y/4 - y/100 + y/400;
+
+		int m = month + 12 * ((14 -month) / 12) - 2;
+
+		int d = (day + x* + 31*m /12) % 7;
+		System.out.println(d);
+	}
 	public static void main(String[] args) {
-		monthlyPayment();
+		dayOfWeek();
 	}
 }
