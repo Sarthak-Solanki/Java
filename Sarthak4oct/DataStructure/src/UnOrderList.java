@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 
 public class UnOrderList {
-	static LinkedList<String> l = null;
+	static UnorderLinkedList<String> l = null;
 	public static void file() throws Exception {
 		File f = new File("/home/administrator/SArthak4oct/UnOrderList.text");
 		BufferedReader s = null;
@@ -21,7 +21,7 @@ public class UnOrderList {
 			e.printStackTrace();
 		}
 		String strs="";
-		l = new LinkedList<String>();
+		l = new UnorderLinkedList<String>();
 		int i ;
 		String st="";
 		while( (st = s.readLine()) != null) {

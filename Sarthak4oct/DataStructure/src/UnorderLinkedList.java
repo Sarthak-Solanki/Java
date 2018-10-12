@@ -1,4 +1,4 @@
-public class LinkedList<G>{
+public class UnorderLinkedList<G>{
 	Node head;
 	int size;
 	public  void add(G data) {

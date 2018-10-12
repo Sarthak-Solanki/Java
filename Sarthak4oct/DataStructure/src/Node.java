@@ -1,6 +1,6 @@
 
 public class Node<G> {
-	 String data;
+	 Object data;
 		Node next;
 	 
 	
